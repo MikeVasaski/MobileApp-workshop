@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:cmu_chat_app/models/chat_user.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -280,7 +281,7 @@ class _ChatPageState extends State<ChatPage> {
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Image.network(
-                          '',
+                          widget.peerAvatar,
                           width: 40,
                           height: 40,
                           fit: BoxFit.cover,

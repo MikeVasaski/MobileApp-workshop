@@ -1,3 +1,4 @@
+import 'package:cmu_chat_app/providers/chat_provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -57,9 +58,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                     googleSignIn: GoogleSignIn(),
                   )),
           Provider<HomeProvider>(create: (_) => HomeProvider()),
-          /**
-            * TODO: Add missing provider
-            */
+          Provider<ChatProvider>(create: (_) => ChatProvider()),
         ],
         child: const MaterialApp(
           debugShowCheckedModeBanner: false,
